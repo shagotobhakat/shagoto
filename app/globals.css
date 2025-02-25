@@ -1,33 +1,290 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  font-family: "REM", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+.container-fluid {
+  max-width: 100%;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x)* .50);
+  padding-left: calc(var(--bs-gutter-x)* .50);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.offcanvas-header .btn-close {
+  padding: 0;
+  margin: 0;
+}
+
+.btn-close {
+  height: 2rem;
+  width: 2rem;
+  --bs-btn-close-color: #fff;
+  color: var(--bs-btn-close-color);
+  background: #fff var(--bs-btn-close-bg) center / 1em auto no-repeat;
+}
+
+.navbar-toggler {
+  background: #0788ff;
+  font-size: 15px;
+}
+
+.overlay::after {
+  opacity: 0;
+}
+
+.overlay::before {
+  opacity: 0;
+}
+
+@media (min-width: 989px) and (max-width: 1199px) {
+  .offcanvas {
+    background: #06223a;
+    margin-top: 120px;
+  }
+
+  .overlay::after {
+    opacity: 0;
+  }
+
+  .overlay::before {
+    opacity: 0;
   }
 }
+
+@media (min-width: 576px) and (max-width: 988px) {
+  .offcanvas {
+    background: #06223a;
+    margin-top: 120px;
+  }
+
+  .overlay::after {
+    opacity: 0;
+  }
+
+  .overlay::before {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 396px) and (max-width: 575px) {
+
+  .offcanvas {
+    background: #06223a;
+    margin-top: 116px;
+  }
+
+  .offcanvas.offcanvas-end {
+    width: 70%;
+  }
+
+  .overlay::after {
+    opacity: 0;
+  }
+
+  .overlay::before {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 395px) {
+  .navbar-toggler {
+    font-size: 8px;
+  }
+
+  .offcanvas {
+    background: #06223a;
+    margin-top: 82px;
+  }
+
+  .offcanvas.offcanvas-end {
+    width: 70%;
+  }
+
+  .overlay::after {
+    opacity: 0;
+  }
+
+  .overlay::before {
+    opacity: 0;
+  }
+}
+
+/* ------------Navbar Animation-------------*/
+
+.main {
+  background: rgb(7, 35, 59);
+  background: linear-gradient(90deg,
+      rgba(7, 35, 59, 1) 46%,
+      rgba(5, 12, 22, 1) 100%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8),
+    -12px 0 8px -4px rgba(31, 73, 125, 0.8); */
+  z-index: 9999999;
+  transition: background-color 0.3s ease;
+}
+
+.new {
+  /* background: #063f70ef;
+  box-shadow: 0 4px 6px rgba(6, 63, 112, 0.4),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  background: rgb(7, 35, 59);
+  background: linear-gradient(90deg,
+      rgba(7, 35, 59, 1) 46%,
+      rgba(5, 12, 22, 1) 100%); */
+  box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8),
+    -12px 0 8px -4px rgba(31, 73, 125, 0.8);
+  animation: menu 1s;
+}
+
+@keyframes menu {
+  from {
+    top: -70px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+
+/*----------- Scrollbar part Start -------------*/
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  --sb-track-color: #063e70;
+  --sb-thumb-color: #0788ff;
+  --sb-size: 14px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
+}
+
+/*----------- Scrollbar part Start -------------*/
+
+/* From Uiverse.io by naveenkumarr-onyx */
+.card {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+  overflow: visible;
+  z-index: 10;
+}
+
+.card .item {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.item:hover {
+  transform: scale(1.95);
+  transition: all 1s ease-in-out;
+  rotate: 360deg;
+}
+
+.item svg {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 7px;
+}
+
+.quantity {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.text--1 {
+  color: rgba(149, 149, 255, 1);
+}
+
+.text--2 {
+  color: rgba(252, 161, 71, 1);
+}
+
+.text--3 {
+  color: rgba(66, 193, 110, 1);
+}
+
+.text--4 {
+  color: rgba(220, 91, 183, 1);
 }
