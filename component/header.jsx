@@ -47,7 +47,7 @@ export default function Header() {
                     />
                   </div>
                   <div className={Style.logoText}>
-                    {/* <h1 className={Style.name}>Shagoto Bhakat</h1> */}
+                    <h1 className={Style.name}>Shagoto Bhakat</h1>
                   </div>
                 </Navbar.Brand>
                 <Navbar.Toggle

@@ -126,7 +126,7 @@
 
 @media (min-width: 396px) and (max-width: 595px) {
   .logoText {
-    top: 50px;
+    visibility: hidden;
   }
 
   .name {
@@ -159,8 +159,7 @@
   }
 
   .logoText {
-    top: 30px;
-    left: 55px;
+    visibility: hidden;
   }
 
   .name {
@@ -193,8 +192,7 @@
   }
 
   .logoText {
-    top: 30px;
-    left: 55px;
+    visibility: hidden;
   }
 
   .name {

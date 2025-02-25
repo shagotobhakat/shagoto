@@ -167,20 +167,11 @@ img {
   position: fixed;
   top: 0;
   width: 100%;
-  /* box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8),
-    -12px 0 8px -4px rgba(31, 73, 125, 0.8); */
   z-index: 9999999;
   transition: background-color 0.3s ease;
 }
 
 .new {
-  /* background: #063f70ef;
-  box-shadow: 0 4px 6px rgba(6, 63, 112, 0.4),
-    0 1px 3px rgba(0, 0, 0, 0.1);
-  background: rgb(7, 35, 59);
-  background: linear-gradient(90deg,
-      rgba(7, 35, 59, 1) 46%,
-      rgba(5, 12, 22, 1) 100%); */
   box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8),
     -12px 0 8px -4px rgba(31, 73, 125, 0.8);
   animation: menu 1s;

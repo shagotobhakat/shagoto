@@ -1,7 +1,6 @@
 "use client";
 import { Row, Col, Container, Button } from "react-bootstrap";
 import Image from "next/image";
-import Link from "next/link";
 import Style from "./about.module.css";
 
 export default function About() {
@@ -14,12 +13,12 @@ export default function About() {
               <Row>
                 <Col lg={4}>
                   <div data-aos="zoom-in" className={Style.left}>
-                    {/* <Image
-                    height={500}
-                    width={330}
-                    src="/shagoto 2.png"
-                    alt="SHAGOTO"
-                  /> */}
+                    <Image
+                      height={500}
+                      width={330}
+                      src="/shagoto 2.png"
+                      alt="SHAGOTO"
+                    />
                   </div>
                 </Col>
                 <Col lg={8}>

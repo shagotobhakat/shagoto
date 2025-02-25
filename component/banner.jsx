@@ -15,7 +15,7 @@ export default function Banner() {
               <Row>
                 <Col lg={8}>
                   <div className={Style.left}>
-                    {/* <h1 className={Style.headOne}>I am Shagoto Bhakat</h1> */}
+                    <h1 className={Style.headOne}>I am Shagoto Bhakat</h1>
                     <h1 className={Style.headTwo}>
                       I am a <Type></Type>{" "}
                     </h1>
@@ -67,26 +67,16 @@ export default function Banner() {
                     <div className={Style.content}>
                       <div className={Style.back}>
                         <div className={Style.backContent}>
-                          {/* <Image
-                          height={400}
-                          width={330}
-                          src="/shagoto 1.png"
-                          alt="SHAGOTO"
-                        /> */}
+                          <Image
+                            height={400}
+                            width={330}
+                            src="/shagoto 1.png"
+                            alt="SHAGOTO"
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
-                  {/* <div className={Style.right}>
-                  <div className={Style.back}>
-                    <Image
-                      height={400}
-                      width={330}
-                      src="/shagoto 1.png"
-                      alt="SHAGOTO"
-                    />
-                  </div>
-                </div> */}
                 </Col>
               </Row>
             </Col>
