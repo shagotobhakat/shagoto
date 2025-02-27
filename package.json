@@ -24,6 +24,7 @@
     "react-simple-typewriter": "^5.0.1"
   },
   "devDependencies": {
+    "@types/json-schema": "^7.0.15",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
